@@ -1,4 +1,42 @@
-# React + Vite
+# EMS - Education Management System
+
+React + Vite asosida qurilgan ta'lim boshqaruv tizimi.
+
+## Yangi funksionallik - Guruh Darsliklarida O'quvchilarni Tanlash
+
+### API Endpoints:
+1. **GET /api/v1/homework/{groupId}** - guruh ID bo'yicha uy vazifalar (masalan: `/homework/59` = 59-guruh)
+2. **GET /api/v1/homework/all** - barcha uy vazifalar (backup uchun)
+3. **GET /api/v1/group/{groupId}/homework/{homeworkId}/result/{studentId}** - o'quvchi natijasi
+
+### O'zgartirishlar:
+
+**GroupLesson sahifasi** (`src/pages/GroupLesson.jsx`):
+- ✅ O'quvchilar ro'yxatiga click event qo'shildi
+- ✅ Homework check modal integratsiyasi
+- ✅ Har bir o'quvchi ustiga bossangiz modal oyna ochiladi
+- ✅ Modal oynada o'quvchi uy vazifasini tekshirish mumkin:
+  - Ball berish (0-100 oralig'ida)
+  - Izoh yozish
+  - Yuborilgan fayllarni ko'rish
+  - GitHub linklarni tekshirish
+  - Status: 60+ ball = ACCEPTED, 0-59 = REJECTED
+
+**HomeworkCheckPanel komponenti** (`src/components/HomeworkCheckPanel.jsx`):
+- ✅ Uy vazifa tafsilotlarini ko'rsatish
+- ✅ O'quvchi topshiriqlarini baholash
+- ✅ Fayllar va linklar bilan ishlash
+- ✅ Avtomatik status belgilash (ball asosida)
+
+### Foydalanish:
+1. Guruh Darsliklariga kiring (`/groups/:id/lesson?date=...`)
+2. Biror mavzuni (lesson) tanlang
+3. O'quvchilar jadvalida biror o'quvchini bosing
+4. Modal oynada uy vazifasini tekshiring va ball bering
+
+---
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

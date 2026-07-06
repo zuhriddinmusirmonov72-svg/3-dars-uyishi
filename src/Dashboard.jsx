@@ -33,7 +33,7 @@ const Dashboard = () => {
         </header>
 
         <div style={{padding: '30px 30px 0'}}>
-          <h1 style={{margin:0}}>Salom, creator!</h1>
+          <h1 style={{margin:0}}>Salom, Ustoz</h1>
           <p style={{color:'#888', marginTop:'5px'}}>105 Coin platformasiga xush kelibsiz!</p>
         </div>
 
